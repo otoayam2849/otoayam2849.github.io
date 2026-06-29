@@ -1,4 +1,6 @@
 import Header from "@/components/Header";
+import WorkCard from "@/components/WorkCard";
+import { works } from "@/data/works";
 
 export default function Home() {
   return (
@@ -41,19 +43,19 @@ export default function Home() {
         </section>
 
 
-        <section id="works"
-          className="mx-auto max-w-5xl px-6 py-20">
-
+        <section id="works" className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="text-3xl font-bold">
             Works
           </h2>
-
-          <p className="mt-6">
-            制作実績を掲載予定です。
-          </p>
-
-        </section>
-
+         <div className="mt-10 grid gap-8">
+           {works.map((work)=>(
+            <WorkCard
+            key={work.title}
+            work={work}
+            />
+            ))}
+          </div>
+          </section>
       </main>
     </>
   );
