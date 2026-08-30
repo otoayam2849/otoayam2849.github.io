@@ -1,0 +1,271 @@
+/* ─── Work Detail Page ─── */
+
+.work_detail {
+  padding: 7.5rem 0 0;
+}
+
+/* Inner container (max 1024px) */
+.work_detail_inner {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.work_detail_inner:first-child {
+  padding: 0 1.5rem;
+}
+
+.work_detail_title_en {
+  font-size: clamp(1.5rem, 10vw, 3.25rem);
+  font-family: "owners-xxwide", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0em;
+  background-clip: text;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.work_detail_title_jp {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  letter-spacing: 0;
+  font-family: "din-2014", "toppan-bunkyu-midashi-go-std", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .work_detail {
+    padding: 4rem 0 0;
+  }
+  .work_detail_inner:first-child {
+    padding: 0 1.5rem;
+  }
+  .work_detail_inner {
+    padding: 0 3rem;
+  }
+  .work_detail_title_en {
+    font-size: clamp(1.5rem, 13vw, 2rem);
+  }
+  .work_detail_title_jp {
+    font-size: 1rem;
+  }
+}
+
+
+/* Hero image (full width, parallax) */
+.work_detail_hero {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.work_detail_hero_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .work_detail_hero {
+    height: 40vh;
+  }
+}
+
+/* Meta (2 columns) */
+.work_detail_meta {
+  width: 100%;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  padding: 4rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .work_detail_meta {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.work_detail_heading {
+  font-family: "owners-xxwide", sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFF;
+}
+
+.work_detail_txt {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #FFF;
+}
+.work_detail_desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #000;
+}
+
+.work_detail_info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.work_detail_info dt {
+  font-weight: 700;
+  color: #999;
+  white-space: nowrap;
+}
+
+.work_detail_info dd {
+  color: #FFF;
+  word-break: break-all;
+}
+
+.work_detail_info dd a {
+  color: #FFF;
+  text-decoration: none;
+  position: relative;
+}
+
+.work_detail_info dd a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* Body text */
+.work_detail_body {
+  padding: 5rem 0;
+}
+
+.work_detail_gallery img {
+  width: 100%;
+}
+
+.work_detail_gallery_item {
+  margin: 0 0 6rem;
+}
+
+.work_detail_gallery_caption {
+  font-size: 0.75rem;
+  color: #000;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Pager */
+
+.work_detail_inner_b {
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+  padding: 4rem 0 5rem;
+}
+
+
+.work_detail_pager {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.work_detail_pager_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.btn_more_link {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "owners-xxwide", sans-serif;
+  display: inline-flex;
+}
+
+.btn_more_link a {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 0;
+  width: 100%;
+  max-width: 280px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  background-color: #000;
+  border: 2px solid #FFF;
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s;
+  opacity: 1 !important;
+  box-sizing: border-box;
+}
+
+.btn_more_link a:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  opacity: 1 !important;
+  letter-spacing: 3px;
+}
+
+.btn_works {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+
+.btn_works a {
+  max-width: 280px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .work_detail_info {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .work_detail_info dt {
+    margin-top: 1rem;
+  }
+  .work_detail_info dd {
+    margin-inline-start: 0;
+  }
+
+  .work_detail_info dt:first-child {
+    margin-top: 0;
+  }
+  /* Body text */
+  .work_detail_body {
+    padding: 4rem 0;
+  }
+  .work_detail_gallery img {
+    width: 100%;
+  }
+
+  .work_detail_gallery_item {
+    margin: 0 0 4rem;
+  }
+}

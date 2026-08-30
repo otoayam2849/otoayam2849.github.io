@@ -1,0 +1,240 @@
+/* ─── Profile Page ─── */
+
+.page_section_career {
+  background-color: #000;
+  padding: 6rem 0;
+}
+
+.profile_detail {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .page_section_career {
+    padding: 5rem 0;
+  }
+  .profile_detail {
+    display: block;
+  }
+}
+
+.profile_body_text {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* ─── Career table ─── */
+.career_table {
+  width: 100%;
+  color: #FFF;
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+.career_table tr {
+  display: block;
+  border-bottom: #FFF 1px solid;
+  margin-bottom: 1.5rem;
+  padding: 0 0 1.5rem;
+}
+
+.career_table tr:first-child td {
+  font-weight: 700;
+}
+
+.career_table th {
+  color: #999999;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0 1.5rem .5rem  0;
+  text-align: left;
+  font-weight: 700;
+  min-width: 150px;
+}
+
+.career_table td {
+  padding: 0;
+}
+
+.table_title {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.career_table tr:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+  .career_table tr,
+  .career_table th,
+  .career_table td {
+    display: block;
+    width: 100%;
+  }
+  .career_table tr {
+    padding: 0 0 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .career_table th {
+    padding: 0 0 1rem;
+  }
+}
+
+/* ─── Skill grid ─── */
+.skill_grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .skill_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill_card {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.skill_card_label {
+  color: #797979;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.skill_card_content {
+  color: #000;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+
+/* ─── Profile Intro (top_profile equivalent) ─── */
+
+.prof_intro {
+  background-color: #f4f4f4;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 0 auto 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .prof_intro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+    text-align: left;
+    padding: 2.5rem;
+    margin: 0 auto 6rem;
+  }
+}
+
+.prof_intro_img_wrap {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .prof_intro_img_wrap {
+    margin: 0 auto 1rem;
+    max-width: 200px;
+  }
+}
+
+.prof_intro_img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.prof_intro_text {
+  flex: 1;
+  min-width: 0;
+}
+
+.prof_intro_name {
+  font-family: "owners-xxwide", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  color: #000;
+  line-height: 1.1;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.prof_intro_name_jp {
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  padding: .5rem 0 0;
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .prof_intro_name {
+    font-size: clamp(1rem, 8vw, 1.75rem);
+  }
+  .prof_intro_name_jp {
+    padding: .5rem 0 0;
+    display: block;
+  }
+}
+
+.prof_cont_txtbox {
+  display: block;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.prof_txtbox .prof_txt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+  font-weight: 500;
+}
+
+.prof_txtbox .prof_txt:first-child {
+  margin-bottom: 1rem;
+}
+
+.prof_cont_txtbox .prof_txt:first-of-type {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem !important;
+  border-bottom: #000 2px solid;
+}
+
+@media screen and (max-width: 767px) {
+  .prof_txtbox {
+    text-align: left;
+  }
+}

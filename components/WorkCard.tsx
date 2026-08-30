@@ -1,61 +1,64 @@
+import Image from "next/image";
+import TransitionLink from "@/components/TransitionLink";
+
 type Work = {
+  slug: string;
   title: string;
-  category: string;
-  description: string;
+  titleJp?: string;
+  date: string;
+  thumbnail: string;
+  overview_text: string;
   role: string[];
-  tools: string[];
+  siteUrl: string;
+  tags: string[];
 };
 
-
-export default function WorkCard({
-  work
-}: {
-  work: Work
-}) {
-
+export default function WorkCard({ work, hideDate, hideTitle, hideTags }: { work: Work; hideDate?: boolean; hideTitle?: boolean; hideTags?: boolean }) {
   return (
-    <article className="border rounded-xl p-6">
+    <TransitionLink href={`/works/${work.slug}`} className="work-card">
+      <article>
+        <div className="work-card__thumb">
+          {work.thumbnail ? (
+            <Image
+              src={work.thumbnail}
+              alt={work.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="work-card__thumb-img"
+            />
+          ) : (
+            <div className="work-card__no-image">
+              <span>No Image</span>
+            </div>
+          )}
+          <div className="work-card__overlay">
+            <span className="work-card__overlay-text">View More</span>
+          </div>
+        </div>
 
-      <p className="text-sm">
-        {work.category}
-      </p>
+        {!hideTitle && (
+          <h3 className="work-card__title">{work.title}</h3>
+        )}
+        {!hideTitle && work.titleJp && (
+          <p className="work-card__title_jp">{work.titleJp}</p>
+        )}
 
-      <h3 className="text-2xl font-bold mt-2">
-        {work.title}
-      </h3>
-
-      <p className="mt-4">
-        {work.description}
-      </p>
-
-
-      <div className="mt-6">
-        <p className="font-bold">
-          Role
-        </p>
-
-        {work.role.map((item)=>(
-          <span
-            key={item}
-            className="mr-2"
-          >
-            {item}
-          </span>
-        ))}
-
-      </div>
-
-
-      <div className="mt-4">
-        <p className="font-bold">
-          Tools
-        </p>
-
-        {work.tools.join(" / ")}
-
-      </div>
-
-
-    </article>
+        {!hideDate && !hideTags && (work.tags.length > 0 || work.date) && (
+          <div className="work-card__meta">
+            <div className="work-card__meta-inner">
+              {work.tags.length > 0 && (
+                <span>{["コーポレートサイト", "採用サイト", "ポータルサイト"].includes(work.tags[0]) ? "WEBサイト" : work.tags[0]}</span>
+              )}
+              {work.tags.length > 0 && work.date && (
+                <span>｜</span>
+              )}
+              {work.date && (
+                <span>{work.date.slice(0, 4)}</span>
+              )}
+            </div>
+          </div>
+        )}
+      </article>
+    </TransitionLink>
   );
 }
