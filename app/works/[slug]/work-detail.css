@@ -59,7 +59,7 @@
 /* Hero image (full width, parallax) */
 .work_detail_hero {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
   position: relative;
 }
@@ -72,7 +72,7 @@
 
 @media screen and (max-width: 767px) {
   .work_detail_hero {
-    height: 40vh;
+    height: 35vh;
   }
 }
 
@@ -113,6 +113,7 @@
   font-size: 1rem;
   line-height: 1.8;
   color: #000;
+  white-space: pre-line;
 }
 
 .work_detail_info {

@@ -49,9 +49,8 @@ export default function Home() {
         <section id="profile" className="top-section">        
           <ScrollFadeIn delay={2000} transitionDelay={800} direction="none">
           <div className="profile_scroll">
-            <p className="profile_scroll_name">TOHYAMA DAIKI <span className="sp_break">PORTFOLIO SITE</span></p>
             <h2 className="profile_scroll_title">
-              <img src="/title_.svg" alt="Tohyama Daiki" />
+              <img src="/title_kv.svg" alt="Tohyama Daiki" />
               <div className="scroll_box">
                 <div className="arrow"><img src="/arrow.svg" alt="" /></div>
                 <div className="scroll">
@@ -60,7 +59,14 @@ export default function Home() {
                 </div>  
               </div>
             </h2>
-            <ul className="profile_scroll_list">
+            <div className="prof_txtbox">
+              <p className="prof_txt">
+                  <span>Web Design / Graphic Design / Service Growth</span>1989年生まれ、岐阜県出身。<br />シンプルで直感的、あらゆる人が使いやすくわかりやすいデザインを制作することを大切に、日々の業務を行なっています。
+              </p>
+            </div>
+            <div className="btn_more"><TransitionLink href="/profile">View More</TransitionLink></div>
+
+            {/* <ul className="profile_scroll_list">
               <li></li>
               <li>Role</li>
               <li></li>
@@ -73,11 +79,11 @@ export default function Home() {
               <li></li>
               <li className="list_focus">{"Web Design /\nGraphic Design /\nService Growth"}</li>
               <li></li>
-            </ul>
+            </ul> */}
           </div>
           </ScrollFadeIn>
           
-          <ScrollFadeIn delay={2000} transitionDelay={800} direction="none">
+          {/* <ScrollFadeIn delay={2000} transitionDelay={800} direction="none">
           <div className="top_profile">
             <div className="profile_img_wrap">
               <img src="/img_prof.jpg" alt="遠山 大希" className="profile_img" />
@@ -95,7 +101,7 @@ export default function Home() {
               <div className="btn_more"><TransitionLink href="/profile">View More</TransitionLink></div>
             </div>
           </div>
-          </ScrollFadeIn>
+          </ScrollFadeIn> */}
         </section>
         <section className="top_works">
           <div className="wrap_works">

@@ -80,6 +80,10 @@
   border-radius: 0.5rem;
   aspect-ratio: 4 / 3;
   background-color: #F4F4F4;
+  border: #d2d2d2 1px solid;
+}
+.work-card__thumb img {
+  height: initial !important;
 }
 
 .work-card__thumb-img {
@@ -148,8 +152,9 @@
 }
 
 .work-card__title_jp {
-  font-size: 0.9rem;
+  font-size: .85rem;
   font-weight: 700;
+  margin-top: .25rem;
   line-height: 1.4;
   color: #000;
   letter-spacing: 0;
@@ -159,4 +164,8 @@
 
 .work-card:hover {
   opacity: 1 !important;
+}
+
+.work_detail_txt {
+  white-space: pre-line;
 }
