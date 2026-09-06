@@ -19,6 +19,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DAIKI TOHYAMA PORTFOLIO",
   description: "遠山大希 ポートフォリオサイト",
+  openGraph: {
+    title: "DAIKI TOHYAMA PORTFOLIO",
+    description: "遠山大希 ポートフォリオサイト",
+    url: "https://otoayam2849.github.io",
+    siteName: "DAIKI TOHYAMA PORTFOLIO",
+    images: [
+      {
+        url: "https://otoayam2849.github.io/ogp.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DAIKI TOHYAMA PORTFOLIO",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DAIKI TOHYAMA PORTFOLIO",
+    description: "遠山大希 ポートフォリオサイト",
+    images: ["https://otoayam2849.github.io/ogp.jpg"],
+  },
 };
 
 export default function RootLayout({
