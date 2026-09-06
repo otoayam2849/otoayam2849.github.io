@@ -19,6 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DAIKI TOHYAMA PORTFOLIO",
   description: "遠山大希 ポートフォリオサイト",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "DAIKI TOHYAMA PORTFOLIO",
     description: "遠山大希 ポートフォリオサイト",
