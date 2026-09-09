@@ -45,7 +45,7 @@
     padding: 0 1.5rem;
   }
   .work_detail_inner {
-    padding: 0 3rem;
+    padding: 0 1.5rem;
   }
   .work_detail_title_en {
     font-size: clamp(1.5rem, 13vw, 2rem);
@@ -106,12 +106,12 @@
 
 .work_detail_txt {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #FFF;
 }
 .work_detail_desc {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #000;
   white-space: pre-line;
 }
@@ -161,10 +161,11 @@
 }
 
 .work_detail_gallery_caption {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: #000;
-  margin-top: 0.5rem;
-  line-height: 1.4;
+  margin-top: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
 }
 
 /* Pager */

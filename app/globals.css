@@ -158,7 +158,6 @@ hr {
 .nav_btn_current {
   background-color: #fff;
   color: #000 !important;
-  letter-spacing: 0;
   border: 2px solid #000;
   pointer-events: none;
   cursor: default;
